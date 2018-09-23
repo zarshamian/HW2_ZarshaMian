@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GPA_mianz_Calculator</string> //App Name
+    <string name="btn_compute">Compute GPA</string> //Compute GPA Button
+    <string name= "btn_clear">Clear Form</string>   //Clear Form Button
+</resources>

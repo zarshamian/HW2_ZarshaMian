@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/input_field1"
+        android:hint="Course #1 Grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/input_field2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Course #2 Grade"
+        app:layout_constraintTop_toBottomOf="@+id/input_field1"
+        app:layout_constraintBottom_toTopOf="@id/input_field3"
+        />
+
+    <EditText
+        android:id="@+id/input_field3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course #3 Grade"
+        app:layout_constraintBottom_toTopOf="@+id/input_field4"
+        app:layout_constraintTop_toBottomOf="@+id/input_field2"
+        />
+
+    <EditText
+        android:id="@+id/input_field4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course #4 Grade"
+        app:layout_constraintBottom_toTopOf="@+id/input_field5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_field3"
+        />
+
+    <EditText
+        android:id="@+id/input_field5"
+        android:hint="Course #5 Grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/input_field4"
+        app:layout_constraintBottom_toTopOf="@id/tv1"
+        />
+
+    <Button
+        android:id="@+id/btn_compute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/btn_compute"
+        app:layout_constraintBottom_toTopOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_field5"
+        android:onClick="compute_gpa"/>
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPA: "
+        android:textSize="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
